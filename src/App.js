@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
 
-function App() {
+import themes from './styles/Theme';
+import GlobalStyles from './styles/Global';
+import { ThemeProvider } from 'styled-components';
+
+import Header from './components/Header';
+import Home from './components/Home';
+
+const App = () => {
+  const [theme, setTheme] = useState('light');
+  const [gridVisible, setGridVisible] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ThemeProvider theme={themes[theme]}>
+        <GlobalStyles />
+        <Header
+          theme={theme}
+          setTheme={setTheme}
+          gridVisible={gridVisible}
+          setGridVisible={setGridVisible}
+        />
+        <Home gridVisible={gridVisible} setGridVisible={setGridVisible} />
+      </ThemeProvider>
     </div>
   );
-}
+};
 
 export default App;
