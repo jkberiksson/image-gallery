@@ -21,7 +21,7 @@ const Loader = ({ loaderAnimation }) => {
         initial='initial'
         animate='animate'
         transition={transition}>
-        Images
+        Imagessss
       </motion.h1>
     </StyledLoader>
   );
