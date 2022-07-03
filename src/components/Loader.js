@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import styled from 'styled-components';
-import { transition } from '../utils/transition';
+import { motion } from "framer-motion";
+import styled from "styled-components";
+import { transition } from "../utils/transition";
 
 const variants = {
   initial: {
@@ -18,10 +18,11 @@ const Loader = ({ loaderAnimation }) => {
     <StyledLoader animate={loaderAnimation}>
       <motion.h1
         variants={variants}
-        initial='initial'
-        animate='animate'
-        transition={transition}>
-        Imagessss
+        initial="initial"
+        animate="animate"
+        transition={transition}
+      >
+        Images
       </motion.h1>
     </StyledLoader>
   );

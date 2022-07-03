@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import styled from 'styled-components';
-import { transition } from '../utils/transition';
+import { motion } from "framer-motion";
+import styled from "styled-components";
+import { transition } from "../utils/transition";
 
 const FlexContainer = ({ data }) => {
   return (
