@@ -48,7 +48,7 @@ const Home = ({ gridVisible, setGridVisible }) => {
       loader();
       sequence();
     }, 2000);
-  }, [loader, sequence]);
+  }, []);
 
   return (
     <motion.div
