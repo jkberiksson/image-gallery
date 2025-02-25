@@ -2,7 +2,6 @@ import FlexContainer from './FlexContainer';
 import GridContainer from './GridContainer';
 import Loader from './Loader';
 
-import jsonData from '../utils/data.json';
 import { data } from '../utils/data.js';
 import { useEffect } from 'react';
 import { useAnimation, useMotionValue } from 'framer-motion';
