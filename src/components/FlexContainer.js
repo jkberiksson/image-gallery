@@ -44,9 +44,9 @@ const Container = styled(motion.div)`
     grid-template-columns: repeat(20, 1fr);
 
     div {
-        width: 70vmin;
-        height: 70vmin;
-        margin: 0 5rem;
+        width: 50vmin;
+        height: 50vmin;
+        margin: 0 3rem;
 
         img {
             height: 100%;

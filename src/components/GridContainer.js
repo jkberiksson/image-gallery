@@ -17,20 +17,27 @@ const GridContainer = ({ data, animation }) => {
 export default GridContainer;
 
 const Container = styled(motion.div)`
-    position: absolute;
-    height: 110vh;
-    width: 110vw;
-    left: -10%;
-    top: -10%;
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(5, 420px);
+    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
     overflow: hidden;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+        overflow-y: scroll;
+    }
 
     div {
         width: 32rem;
         height: 30rem;
         padding: 32px 42px;
         place-self: center;
+
+        @media (max-width: 768px) {
+            width: 22rem;
+            height: 20rem;
+            padding: 22px 32px;
+        }
 
         img {
             height: 100%;
