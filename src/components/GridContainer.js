@@ -17,7 +17,6 @@ const GridContainer = ({ data, animation }) => {
 export default GridContainer;
 
 const Container = styled(motion.div)`
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
     overflow: hidden;

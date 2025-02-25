@@ -38,6 +38,7 @@ export default FlexContainer;
 
 const Container = styled(motion.div)`
     height: 100vh;
+    overflow: hidden;
     overflow-x: scroll;
     display: grid;
     align-items: center;
