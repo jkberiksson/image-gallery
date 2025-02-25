@@ -25,6 +25,7 @@ const Container = styled(motion.div)`
 
     @media (max-width: 768px) {
         grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+        padding-bottom: 120px;
     }
 
     div {
