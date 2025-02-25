@@ -4,13 +4,15 @@ import { transition } from '../utils/transition';
 
 const GridContainer = ({ data, animation }) => {
     return (
-        <Container>
-            {data.map((item, index) => (
-                <motion.div animate={animation} key={index} custom={index}>
-                    <motion.img layoutId={`${index}`} src={item} transition={transition} />
-                </motion.div>
-            ))}
-        </Container>
+        <div style={{ height: '100%', overflowY: 'scroll' }}>
+            <Container>
+                {data.map((item, index) => (
+                    <motion.div animate={animation} key={index} custom={index}>
+                        <motion.img layoutId={`${index}`} src={item} transition={transition} />
+                    </motion.div>
+                ))}
+            </Container>
+        </div>
     );
 };
 
@@ -23,7 +25,6 @@ const Container = styled(motion.div)`
 
     @media (max-width: 768px) {
         grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
-        overflow-y: scroll;
     }
 
     div {

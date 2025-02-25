@@ -14,6 +14,8 @@ body {
     background-color: ${({ theme }) => theme.bgColor};
     color: ${({ theme }) => theme.color};
     transition: background-color .5s ease-in-out, color .5s ease-in-out;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 `;
